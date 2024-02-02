@@ -1,0 +1,11 @@
+
+.bodyItemList{
+    margin: 0 30px;
+}
+
+.containerProductCard{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
