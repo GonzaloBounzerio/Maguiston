@@ -4,7 +4,7 @@ import "./ItemListContainer.css"
 
 const ItemListContainer = () => {
   return (
-    <div className="bodyItemList">
+      <div className="bodyItemList">
         <div className="containerProductCard">
             <ProductCard nom={"zapatillas"} precio={"3200"} descrip={"son las mejores"}/>
             <ProductCard nom={"pantalon"} precio={"1400"} descrip={"son casi mejores"}/>
