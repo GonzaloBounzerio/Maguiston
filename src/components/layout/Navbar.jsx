@@ -14,7 +14,7 @@ const Navbar = () => {
         </div>
         <div className="tituloNavbar">
             <h1>Maguiston</h1>
-            <h4>Para fanáticos del deporte</h4>
+            <h4>Música para llevar</h4>
         </div>
         <div className="buscadorNavbar">
             <Buscador />
