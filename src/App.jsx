@@ -1,12 +1,14 @@
 import "./App.css"
 import Navbar from "./components/layout/Navbar"
-import ItemListContainer from "./components/pages/ItemListContainer"
+import FetchingDataContainer from "./components/pages/fetchingData/FetchingDataContainer"
+import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer"
 
 function App() {
   return (
     <>
-      <Navbar />
-      <ItemListContainer />
+      /* <Navbar />
+      <ItemListContainer /> */
+      {/* <FetchingDataContainer /> */}
     </>
     )
 }

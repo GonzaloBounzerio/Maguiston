@@ -1,9 +1,10 @@
 export let products = [
     {
         id:1,
-        title:"titulo",
+        title:"Nos siguen pegando abajo",
+        autor:"Charly García",
+        año:9999,
         price:123,
-        description:"descripcion",
         img:"",
         stock:123,
         category:"",
