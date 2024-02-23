@@ -6,7 +6,7 @@ export let products = [
     año:1984,
     price:300,
     img:"",
-    stock:123,
+    stock:72,
     category:"",
   },
   {
