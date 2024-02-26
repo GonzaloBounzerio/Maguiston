@@ -5,7 +5,7 @@ const ProductCard = ({title,autor,año,price,img}) => {
   return (
     <div className="cardBody">
         <div className="imageCard">
-          <img src={img} alt="" />    
+          {/* <img src={img} alt="" />     */}
         </div>
         <div className="cardText">
             <div className="descripCard">

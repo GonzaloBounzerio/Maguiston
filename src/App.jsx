@@ -6,8 +6,8 @@ import ItemListContainer from "./components/pages/itemListContainer/ItemListCont
 function App() {
   return (
     <>
-      /* <Navbar />
-      <ItemListContainer /> */
+      <Navbar />
+      <ItemListContainer /> 
       {/* <FetchingDataContainer /> */}
     </>
     )
