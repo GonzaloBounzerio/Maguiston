@@ -1,4 +1,5 @@
 
+
 .bodyNavbar{
     background-color:var(--redPrim);
     display: flex;
@@ -46,4 +47,11 @@
 
 .btnCart{
     cursor: pointer;
+}
+
+.divSectionProv{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 2rem;
 }

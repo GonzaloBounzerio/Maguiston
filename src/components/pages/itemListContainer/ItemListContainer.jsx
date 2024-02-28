@@ -1,33 +1,26 @@
 import ItemList from "./ItemList"
-import {products} from "../../../productMock"
+import {getProducts, products} from "../../../productMock"
 import { useEffect, useState } from "react"
 
 
 const ItemListContainer = () => {
 
-const [items,setItems] = useState([])
+const [items,setItems] = useState([]);
+const [isLoading,setIsLoading] = useState(true);
 
 useEffect( () => {
-  const tarea = new Promise((resolve,reject)=>{
-    resolve(products)
-    reject("error")
-  })
-  
-  tarea
-    .then((res)=> {
-      setItems (res)
+  getProducts()
+    .then( resp => {
+      setItems(resp)
+      setIsLoading(false)
     })
-    .catch((error)=>{
-  
-    })
-  
-} , [] 
-);
+}, [])
 
 
   return (
      <>
-     <ItemList items={items}/>
+     {isLoading ? <h2>Cargando albumes...</h2> : <ItemList items={items}/> }
+     
      </> 
   )
 }

@@ -9,8 +9,8 @@ const ItemList = ({items}) => {
     <div className="bodyItemList">
         <div className="containerProductCard">
             {
-                items.map( ({id,title,autor,año,price,img,stock,category}) => {
-                    return <ProductCard key={id} title={title} price={price} autor={autor} año={año} img={img} />
+                items.map( ({id,title,autor,año,price,img,stock}) => {
+                    return <ProductCard key={id} id={id} title={title} price={price} autor={autor} año={año} img={img} />
                 })
             }    
         </div>
