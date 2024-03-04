@@ -290,6 +290,346 @@ autorID: 1,
       img: "url-el-aguante-album",
       stock: 999,
 autorID: 1,
+    },
+    {
+      id: "28",
+      title: "Bocanada",
+      autor: "Gustavo Cerati",
+      año: 1999,
+      price: 15.50,
+      img: "url-bocanada-album",
+      stock: 500,
+      autorID: 2
+    },
+    {
+      id: "29",
+      title: "Fuerza Natural",
+      autor: "Gustavo Cerati",
+      año: 2009,
+      price: 12.80,
+      img: "url-fuerza-natural-album",
+      stock: 700,
+      autorID: 2
+    },
+    {
+      id: "32",
+      title: "Amor Amarillo",
+      autor: "Gustavo Cerati",
+      año: 1993,
+      price: 14.00,
+      img: "url-amor-amarillo-album",
+      stock: 600,
+      autorID: 2
+    },
+    {
+      id: "33",
+      title: "Signos",
+      autor: "Soda Stereo",
+      año: 1986,
+      price: 12.50,
+      img: "url-signos-album",
+      stock: 550,
+      autorID: 2
+    },
+    {
+      id: "34",
+      title: "Dynamo",
+      autor: "Soda Stereo",
+      año: 1992,
+      price: 13.20,
+      img: "url-dynamo-album",
+      stock: 650,
+      autorID: 2
+    },
+    {
+      id: "35",
+      title: "Siempre es hoy",
+      autor: "Gustavo Cerati",
+      año: 2002,
+      price: 13.90,
+      img: "url-siempre-es-hoy-album",
+      stock: 520,
+      autorID: 2
+    },
+    {
+      id: "36",
+      title: "Ahí vamos",
+      autor: "Gustavo Cerati",
+      año: 2006,
+      price: 12.60,
+      img: "url-ahi-vamos-album",
+      stock: 670,
+      autorID: 2
+    },
+    {
+      id: "37",
+      title: "Canción Animal",
+      autor: "Soda Stereo",
+      año: 1990,
+      price: 13.60,
+      img: "url-cancion-animal-album",
+      stock: 550,
+      autorID: 2
+    },
+    {
+      id: "38",
+      title: "Sueño Stereo",
+      autor: "Soda Stereo",
+      año: 1995,
+      price: 14.20,
+      img: "url-sueno-stereo-album",
+      stock: 600,
+      autorID: 2
+    },
+    {
+      id: "39",
+      title: "Me verás volver",
+      autor: "Soda Stereo",
+      año: 2007,
+      price: 16.50,
+      img: "url-me-veras-volver-album",
+      stock: 800,
+      autorID: 2
+    },
+    {
+      id: "40",
+      title: "Colores Santos",
+      autor: "Gustavo Cerati y Daniel Melero",
+      año: 1992,
+      price: 11.80,
+      img: "url-colores-santos-album",
+      stock: 480,
+      autorID: 2
+    },
+    {
+      id: "41",
+      title: "Comfort y música para volar",
+      autor: "Soda Stereo",
+      año: 1996,
+      price: 13.40,
+      img: "url-comfort-y-musica-para-volar-album",
+      stock: 560,
+      autorID: 2
+    },
+    {
+      id: "42",
+      title: "Amor Amarillo",
+      autor: "Gustavo Cerati",
+      año: 1993,
+      price: 14.00,
+      img: "url-amor-amarillo-album",
+      stock: 600,
+      autorID: 2
+    },
+    {
+      id: "43",
+      title: "El último concierto A",
+      autor: "Soda Stereo",
+      año: 1997,
+      price: 15.20,
+      img: "url-el-ultimo-concierto-a-album",
+      stock: 620,
+      autorID: 2
+    },
+    {
+      id: "44",
+      title: "Ahí vamos",
+      autor: "Gustavo Cerati",
+      año: 2006,
+      price: 12.60,
+      img: "url-ahi-vamos-album",
+      stock: 670,
+      autorID: 2
+    },
+    {
+      id: "45",
+      title: "Siempre es hoy",
+      autor: "Gustavo Cerati",
+      año: 2002,
+      price: 13.90,
+      img: "url-siempre-es-hoy-album",
+      stock: 520,
+      autorID: 2
+    },
+    {
+      id: "46",
+      title: "Dynamo",
+      autor: "Soda Stereo",
+      año: 1992,
+      price: 13.20,
+      img: "url-dynamo-album",
+      stock: 650,
+      autorID: 2
+    },
+    {
+      id: "47",
+      title: "Artaud",
+      autor: "Luis Alberto Spinetta",
+      año: 1973,
+      price: 14.50,
+      img: "url-artaud-album",
+      stock: 450,
+      autorID: 3
+    },
+    {
+      id: "48",
+      title: "Kamikaze",
+      autor: "Luis Alberto Spinetta",
+      año: 1982,
+      price: 13.80,
+      img: "url-kamikaze-album",
+      stock: 620,
+      autorID: 3
+    },
+    {
+      id: "49",
+      title: "La la la",
+      autor: "Luis Alberto Spinetta",
+      año: 1986,
+      price: 12.90,
+      img: "url-la-la-la-album",
+      stock: 580,
+      autorID: 3
+    },
+    {
+      id: "50",
+      title: "Spinetta y los Socios del Desierto",
+      autor: "Luis Alberto Spinetta",
+      año: 1997,
+      price: 15.20,
+      img: "url-spinetta-y-los-socios-del-desierto-album",
+      stock: 700,
+      autorID: 3
+    },
+    {
+      id: "51",
+      title: "Fuego Gris",
+      autor: "Invisible",
+      año: 1973,
+      price: 16.70,
+      img: "url-fuego-gris-album",
+      stock: 480,
+      autorID: 3
+    },
+    {
+      id: "52",
+      title: "Durazno Sangrando",
+      autor: "Invisible",
+      año: 1975,
+      price: 17.90,
+      img: "url-durazno-sangrando-album",
+      stock: 550,
+      autorID: 3
+    },
+    {
+      id: "53",
+      title: "Almendra",
+      autor: "Almendra",
+      año: 1969,
+      price: 18.50,
+      img: "url-almendra-album",
+      stock: 400,
+      autorID: 3
+    },
+    {
+      id: "54",
+      title: "Los Niños que Escriben en el Cielo",
+      autor: "Luis Alberto Spinetta",
+      año: 1991,
+      price: 14.80,
+      img: "url-los-ninos-que-escriben-en-el-cielo-album",
+      stock: 600,
+      autorID: 3
+    },
+    {
+      id: "55",
+      title: "El jardín de los presentes",
+      autor: "Invisible",
+      año: 1976,
+      price: 16.20,
+      img: "url-el-jardin-de-los-presentes-album",
+      stock: 530,
+      autorID: 3
+    },
+    {
+      id: "56",
+      title: "Un Mañana",
+      autor: "Luis Alberto Spinetta",
+      año: 2003,
+      price: 12.40,
+      img: "url-un-manana-album",
+      stock: 680,
+      autorID: 3
+    },
+    {
+      id: "57",
+      title: "Kamikaze",
+      autor: "Spinetta Jade",
+      año: 1982,
+      price: 14.30,
+      img: "url-kamikaze-spinetta-jade-album",
+      stock: 550,
+      autorID: 3
+    },
+    {
+      id: "58",
+      title: "El valle interior",
+      autor: "Luis Alberto Spinetta",
+      año: 1980,
+      price: 13.70,
+      img: "url-el-valle-interior-album",
+      stock: 620,
+      autorID: 3
+    },
+    {
+      id: "59",
+      title: "Madre en años luz",
+      autor: "Luis Alberto Spinetta",
+      año: 1999,
+      price: 14.90,
+      img: "url-madre-en-anos-luz-album",
+      stock: 570,
+      autorID: 3
+    },
+    {
+      id: "60",
+      title: "Alma de diamante",
+      autor: "Luis Alberto Spinetta",
+      año: 1980,
+      price: 12.60,
+      img: "url-alma-de-diamante-album",
+      stock: 650,
+      autorID: 3
+    },
+    {
+      id: "61",
+      title: "Los libros de la buena memoria",
+      autor: "Luis Alberto Spinetta",
+      año: 1983,
+      price: 13.40,
+      img: "url-los-libros-de-la-buena-memoria-album",
+      stock: 610,
+      autorID: 3
+    },
+    {
+      id: "62",
+      title: "Only Love Can Sustain",
+      autor: "Luis Alberto Spinetta",
+      año: 2000,
+      price: 15.20,
+      img: "url-only-love-can-sustain-album",
+      stock: 590,
+      autorID: 3
+    },
+    {
+      id: "63",
+      title: "Silver Sorgo",
+      autor: "Spinetta Jade",
+      año: 1980,
+      price: 14.80,
+      img: "url-silver-sorgo-album",
+      stock: 540,
+      autorID: 3
     }
   ];
 
