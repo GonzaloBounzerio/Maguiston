@@ -20,6 +20,8 @@ const ItemDetailContainer = () => {
                 })
         },[])
 
+        
+
   return (
     <>
       {isLoading ? <h2>Cargando album...</h2> : <ItemDetail{...item}/>}

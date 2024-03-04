@@ -7,9 +7,8 @@
     font-family: "Barlow Condensed", sans-serif;
 }
 
-
 :root{
-    --redPrim: #df1024;
+    --redPrim: #df1025;
     --greyPrim: #DCD6D7;
     --greySecond:#625A67;
     --blackPrim:#302B31;
@@ -17,5 +16,5 @@
 }
 
 body{
-    background-color: var(--greyPrim);
+    background-color: var(--greySecond);
 }

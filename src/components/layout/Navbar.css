@@ -2,17 +2,19 @@
 
 .bodyNavbar{
     background-color:var(--redPrim);
-    display: flex;
-    flex-direction: row;
-    height: 120px;
-    color: black;
-}
-
-.menuNavbar{
-    width: 8%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 0;
+    position: sticky;
+    height: 140px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
+    color: var(--blackPrim);
+    border-radius: 0px 0px 34px 0px;
+-webkit-border-radius: 0px 0px 34px 0px;
+-moz-border-radius: 0px 0px 34px 0px;
+box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 6px 7px 0px rgba(0,0,0,0.75);
 }
 
 .btnMenuNavbar{
@@ -20,7 +22,9 @@
 }
 
 .tituloNavbar{
-    width: 50%;
+    grid-row: 1;
+    grid-column: 1;
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,15 +34,9 @@
     font-size: 3rem;
 }
 
-.buscadorNavbar{
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .cartNavbar{
-    width: 12%;
+    grid-column: 2;
+    grid-row: 1;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -49,9 +47,24 @@
     cursor: pointer;
 }
 
-.divSectionProv{
+.divSectionLinks{
+    grid-column-start: 1;
+    grid-column-end: 3;
     display: flex;
-    justify-content:center;
-    align-items: center;
-    font-size: 2rem;
+    justify-content: center;
+}
+
+.btnNav{
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+    height: 100%;
+    width: 15%;
+    margin: 0 20px;
+    color: var(--blackPrim);
+    
+}
+.btnNav:hover{
+    background-color: var(--greyPrim); 
+    font-style: italic ;
 }

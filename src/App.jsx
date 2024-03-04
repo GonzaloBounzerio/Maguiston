@@ -1,6 +1,6 @@
 import "./App.css"
+import HomeContainer from "./components/pages/home/HomeContainer"
 import Cart from "./components/common/Cart"
-import ProductCard from "./components/common/ProductCard"
 import Navbar from "./components/layout/Navbar"
 import FetchingDataContainer from "./components/pages/fetchingData/FetchingDataContainer"
 import ItemDetailContainer from "./components/pages/itemDetailContainer/ItemDetailCOntainer"
@@ -13,12 +13,12 @@ function App() {
     <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<ItemListContainer/>}/>
+        <Route path="/" element={<HomeContainer/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/item/:id" element={<ItemDetailContainer/>}/>
+        <Route path="/albumes/:autorID" element={<ItemListContainer/>}/>
       </Routes>
     </BrowserRouter>
-    
     </>
     )
 }
