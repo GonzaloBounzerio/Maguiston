@@ -3,9 +3,9 @@ import ItemCount from "./ItemCount";
 
 
 
-const ItemCountContainer = ( {stock , onAdd}) => {
+const ItemCountContainer = ( {stock , onAdd, initial=1}) => {  //si llega undefined ponele =1
 
-const[counter,setCounter]=useState(1);
+const[counter,setCounter]=useState(initial);
 
 
 const addOne = () => {

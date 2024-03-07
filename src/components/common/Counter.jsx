@@ -7,11 +7,13 @@ import { useContext, useState } from "react"
 
 const Counter = () => {
 
-  const { cart } = useContext(CartContext)
+  const { getTotalItems } = useContext(CartContext)
+
+  let total = getTotalItems()
 
   return (
     <div className="divCounter">
-        <h4>{cart.length}</h4>
+        <h4>{total}</h4>
     </div>
   )
 }

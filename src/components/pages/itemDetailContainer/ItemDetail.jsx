@@ -3,7 +3,7 @@
 import React from 'react'
 import ItemCountContainer from '../../common/ItemCountContainer'
 
-const ItemDetail = ( {item , onAdd}) => {
+const ItemDetail = ( {item , onAdd, initial}) => {
 
   return (
     <>
@@ -19,7 +19,7 @@ const ItemDetail = ( {item , onAdd}) => {
             <h3>U$D {item.price}</h3>
         </div>
         <div className="contadorItem">
-          <ItemCountContainer stock={item.stock} onAdd={onAdd} />
+          <ItemCountContainer stock={item.stock} onAdd={onAdd} initial={initial}/>
         </div>
       </div>
     </>
