@@ -3,7 +3,7 @@ import ItemCount from "./ItemCount";
 
 
 
-const ItemCountContainer = ( stock , onAdd) => {
+const ItemCountContainer = ( {stock , onAdd}) => {
 
 const[counter,setCounter]=useState(1);
 

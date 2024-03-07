@@ -1,8 +1,9 @@
 
 import { useNavigate, useParams } from 'react-router-dom'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
 import { getProduct } from '../../../productMock';
+import { CartContext } from '../../../context/CartContext';
 
 const ItemDetailContainer = () => {
 
@@ -11,6 +12,8 @@ const ItemDetailContainer = () => {
 
         const [item, setItem] = useState(null)
         const [isLoading,setIsLoading] = useState(true)
+
+        const {addToCart} = useContext(CartContext)
 
        // const navigate = useNavigate()
 
@@ -25,8 +28,9 @@ const ItemDetailContainer = () => {
         const onAdd = ( cant ) => {
           let infoProducto = {
             ...item,
-            quantity:cantidad,
+            quantity:cant,
           }
+          addToCart(infoProducto)
           //navigate("/cart") navigate(-1) te vuelve una pag atras
         }
         

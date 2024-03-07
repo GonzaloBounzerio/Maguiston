@@ -1,10 +1,11 @@
 
 
-import React from 'react'
+import CheckOutContainer from '../checkOut/CheckOutContainer'
 
 const Cart = () => {
   return (
-    <div>Cart</div>
+    <>
+    </>
   )
 }
 

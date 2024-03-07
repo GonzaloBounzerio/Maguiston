@@ -1,15 +1,17 @@
 
+import { CartContext } from "../../context/CartContext"
 import "./Counter.css"
-import { useState } from "react"
+import { useContext, useState } from "react"
 
 
 
 const Counter = () => {
-    const[counter,setCounter] = useState(0)
+
+  const { cart } = useContext(CartContext)
 
   return (
     <div className="divCounter">
-        <span>{counter}</span>
+        <h4>{cart.length}</h4>
     </div>
   )
 }
