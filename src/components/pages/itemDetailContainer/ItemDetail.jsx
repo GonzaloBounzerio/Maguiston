@@ -1,8 +1,10 @@
 
 
 import React from 'react'
+import ItemCountContainer from '../../common/ItemCountContainer'
 
-const ItemDetail = ( item ) => {
+const ItemDetail = ( {item , onAdd}) => {
+
   return (
     <>
       <div className="divCardDetail">
@@ -16,8 +18,8 @@ const ItemDetail = ( item ) => {
         <div className="priceDetail">
             <h3>U$D {item.price}</h3>
         </div>
-        <div className="btnCartDetail">
-            <button>Agregar al carrito</button>
+        <div className="contadorItem">
+          <ItemCountContainer stock={item.stock} onAdd={onAdd} />
         </div>
       </div>
     </>

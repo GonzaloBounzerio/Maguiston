@@ -6,7 +6,7 @@ export let products = [
       año: 1972,
       price: 1.65, // Precio aproximado en dólares en 1972
       img: "url-vida-album",
-      stock: 999,
+      stock: 23,
       autorID: 1,
     },
     {
