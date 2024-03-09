@@ -1,4 +1,4 @@
-import "./App.css"
+
 import HomeContainer from "./components/pages/home/HomeContainer"
 import CartContainer from "./components/pages/cart/CartContainer"
 import ItemDetailContainer from "./components/pages/itemDetailContainer/ItemDetailCOntainer"
