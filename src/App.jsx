@@ -18,6 +18,7 @@ function App() {
             <Route path="/" element={<HomeContainer/>}/>
             <Route path="/cart" element={<CartContainer/>}/>
             <Route path="/item/:id" element={<ItemDetailContainer/>}/>
+            <Route path="/albumes" element={<ItemListContainer/>}/>
             <Route path="/albumes/:autorID" element={<ItemListContainer/>}/>
             <Route path="/checkout" element={<CheckOutContainer/>}/>
             <Route path="*" element={<h2>404 not found</h2>}/>

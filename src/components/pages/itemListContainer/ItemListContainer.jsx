@@ -2,6 +2,8 @@ import ItemList from "./ItemList"
 import {getProducts, products} from "../../../productMock"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { db } from "../../../firebaseConfig"
+import { collection, getDocs , query , where} from "firebase/firestore"
 
 
 const ItemListContainer = () => {
@@ -12,18 +14,23 @@ const ItemListContainer = () => {
 
 useEffect( () => {
   setIsLoading(true)
-  getProducts()
-    .then( (resp) => {
 
-      if (autorID!=0) {
-        const productsFilter = resp.filter((product) => product.autorID == autorID);
-        setItems(productsFilter);
-      } else {
-        setItems(resp);
-      }
-
-      setIsLoading(false)
+  let productsCollection = collection( db , "products" )
+  
+  let consulta = productsCollection
+  
+  if (autorID){
+    let productsCollectionFiltered = query( productsCollection , where( "autorID" , "==", autorID )) 
+    consulta = productsCollectionFiltered
+  }
+  
+  getDocs(consulta).then( res => {
+    let arrayData = res.docs.map( (elemento) => {
+      return {...elemento.data(), id:elemento.id}
     })
+    setItems(arrayData)
+  }).finally( () => setIsLoading(false))
+
 }, [autorID])
 
   return (

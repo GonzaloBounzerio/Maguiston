@@ -4,6 +4,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
 import { getProduct } from '../../../productMock';
 import { CartContext } from '../../../context/CartContext';
+import { db } from '../../../firebaseConfig';
+import { collection , doc , getDoc} from "firebase/firestore"
 
 const ItemDetailContainer = () => {
 
@@ -20,11 +22,13 @@ const ItemDetailContainer = () => {
        // const navigate = useNavigate()
 
         useEffect(()=>{
-            getProduct(id)
-                .then(resp => {
-                    setItem(resp)
-                    setIsLoading(false)
-                })
+          setIsLoading(true)
+          let productsCollection = collection(db,"products")
+          let refDoc = doc(productsCollection,id)
+          getDoc(refDoc) .then( res => {
+            setItem( {...res.data() , id:res.id})
+          }).finally( () => setIsLoading(false))
+            
         },[id])
 
         const onAdd = ( cant ) => {

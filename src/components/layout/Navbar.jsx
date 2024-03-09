@@ -19,7 +19,7 @@ const Navbar = () => {
               </div>
           </div>
           <div className="divSectionLinks">  
-            <Link className="btnNav" to={"/albumes/0"}> Albumes </Link>
+            <Link className="btnNav" to={"/albumes"}> Albumes </Link>
             <Link className="btnNav" to={`/albumes/${1}`}> Charly García </Link>
             <Link className="btnNav" to={`/albumes/${2}`}> Gustavo Cerati </Link>
             <Link className="btnNav" to={`/albumes/${3}`}> Spinetta </Link>
