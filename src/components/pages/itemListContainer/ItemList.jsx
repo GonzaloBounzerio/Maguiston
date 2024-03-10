@@ -9,7 +9,7 @@ const ItemList = ({items}) => {
     <div className="bodyItemList">
         <div className="containerProductCard">
             {
-                items.map( ({id,title,autor,año,price,img,stock}) => {
+                items.map( ({id,title,autor,año,price,img}) => {
                     return <ProductCard key={id} id={id} title={title} price={price} autor={autor} año={año} img={img} />
                 })
             }    
