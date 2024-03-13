@@ -1,7 +1,7 @@
 
+import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import "./Counter.css"
-import { useContext, useState } from "react"
 
 
 

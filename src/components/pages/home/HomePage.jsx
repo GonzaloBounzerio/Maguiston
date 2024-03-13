@@ -1,5 +1,6 @@
 
 
+// import { AddDocs } from "../../../addDocs"
 import ArtistCard from "../../common/ArtistCard"
 import "./HomePage.css"
 
@@ -8,6 +9,7 @@ const HomePage = ({artists}) => {
   return (
     <>
      <div className="homeDiv">
+      {/* <AddDocs/> */}
         <div className="artistasHomeDiv">
             {
               artists.map( ({autorID,name,img}) => {
