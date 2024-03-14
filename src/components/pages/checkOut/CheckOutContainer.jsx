@@ -47,7 +47,7 @@ const CheckOutContainer = () => {
 
 
   return (
-    <> <CheckOut envioDeFormulario={envioDeFormulario} captureData={captureData}/> </>
+    <> <CheckOut envioDeFormulario={envioDeFormulario} captureData={captureData} orderID={orderID}/> </>
   )
 }
 
