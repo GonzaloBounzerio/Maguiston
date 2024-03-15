@@ -8,13 +8,15 @@
 }
 
 :root{
-    --redPrim: #df1025;
-    --greyPrim: #DCD6D7;
-    --greySecond:#625A67;
-    --blackPrim:#302B31;
+    --redPrim: #E63946;
+    --greyPrim: #F1FAEE;
+    --celestePrim:#A8DADC;
+    --celesteSec:#457B9D;
+    --bluePrim:#1D3557;
+    --blackPrim:#353434;
     /* para invocar se pone var(--redPrim); */
 }
 
 body{
-    background-color: var(--greySecond);
+    background-color: var(--greyPrim);
 }

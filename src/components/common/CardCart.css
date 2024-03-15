@@ -1,0 +1,30 @@
+
+.cardCartBody{
+    margin-bottom: 50px;
+    border: 1px solid black;
+    height: 170px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.imgCartCard{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 95%;
+}
+
+.imgCartCard img{
+    height: 100%;
+}
+
+.textCartCard{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.btnCartCard{
+    grid-column: 2;
+    grid-row: 2;
+}

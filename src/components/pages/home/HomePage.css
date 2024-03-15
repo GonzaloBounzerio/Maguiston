@@ -1,4 +1,8 @@
 
+.homeDiv{
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
 
 .artistasHomeDiv{
     display: flex;

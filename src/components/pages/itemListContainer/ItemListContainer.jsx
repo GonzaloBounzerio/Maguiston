@@ -1,9 +1,9 @@
 import ItemList from "./ItemList"
-import {getProducts, products} from "../../../productMock"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { db } from "../../../firebaseConfig"
 import { collection, getDocs , query , where} from "firebase/firestore"
+import LoadPage from "../../common/LoadPage"
 
 
 const ItemListContainer = () => {
@@ -35,7 +35,7 @@ useEffect( () => {
 
   return (
      <>
-     {isLoading ? <h2>Cargando albumes...</h2> : <ItemList items={items}/> }
+     {isLoading ? <LoadPage/> : <ItemList items={items}/> }
      
      </> 
   )

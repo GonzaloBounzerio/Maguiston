@@ -1,6 +1,9 @@
 
+
 .artistCardBody{
-    background-color: brown;
+    overflow: hidden;
+    padding: 0.5%;
+    background-color: var(--celesteSec);
     width: 25%;
     height: 80%;
     display: flex;
@@ -11,20 +14,29 @@
 }
 
 .artistCardBody:hover{
-    transform: scale(1.1) ;
--webkit-transform: scale(1.1) ;
--moz-transform: scale(1.1) ;
-transform: scale(1.1) skew(5deg);
--webkit-transform: scale(1.1) skew(5deg);
--moz-transform: scale(1.1) skew(5deg);
+    box-shadow: 0px 5px 53px 0px rgba(0,0,0,0.47);
+-webkit-box-shadow: 0px 5px 53px 0px rgba(0,0,0,0.47);
+-moz-box-shadow: 0px 5px 53px 0px rgba(0,0,0,0.47);
 }
 
+
 .artistNomHome{
-    background-color: var(--redPrim);
-    height: 20%;
+    background-color: var(--celestePrim);
+    height: 12%;
     text-align: center;
+    border-radius: 0px 0px 30px 0px;
+-webkit-border-radius: 0px 0px 30px 0px;
+-moz-border-radius: 0px 0px 30px 0px;
 }
 
 .artistImgHome{
-    height: 80%;
+    border-radius: 66px 0px 0px 0px;
+-webkit-border-radius: 66px 0px 0px 0px;
+-moz-border-radius: 66px 0px 0px 0px;
+    height: 88%;
+    overflow: hidden;
+}
+
+.artistImgHome img{
+    width: 100%;
 }

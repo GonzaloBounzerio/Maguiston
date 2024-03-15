@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import HomePage from "./HomePage"
 import { db } from "../../../firebaseConfig"
 import { collection, getDocs} from "firebase/firestore"
+import LoadPage from "../../common/LoadPage"
 
 
 const HomeContainer = () => {
@@ -23,7 +24,7 @@ const HomeContainer = () => {
 
   return (
     <>
-     { isLoading ? <h2>Cargando...</h2> : <HomePage artists={artists}/>}
+     { isLoading ? <LoadPage/> : <HomePage artists={artists}/>}
     </>
   )
 }

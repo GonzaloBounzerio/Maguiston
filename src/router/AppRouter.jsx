@@ -1,6 +1,7 @@
 import { Routes , Route } from "react-router-dom"
 import { routes } from "./routes"
 import LayoutContainer from "../components/layout/LayoutContainer"
+import ErrorPage from "../components/pages/ErrorPage"
 
 
 const AppRouter = () => {
@@ -12,7 +13,7 @@ const AppRouter = () => {
                 routes.map ( ({id,path,Element}) => <Route key={id} path={path} element={<Element/>}/>)
                 }
             </Route>
-        <Route path="*" element={<h2>404 not found</h2>}/>
+        <Route path="*" element={<ErrorPage/>}/>
       </Routes>
     </>
   )

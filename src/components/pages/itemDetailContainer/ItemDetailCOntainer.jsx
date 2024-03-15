@@ -2,10 +2,10 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import React, { useContext, useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
-import { getProduct } from '../../../productMock';
 import { CartContext } from '../../../context/CartContext';
 import { db } from '../../../firebaseConfig';
 import { collection , doc , getDoc} from "firebase/firestore"
+import LoadPage from '../../common/LoadPage';
 
 const ItemDetailContainer = () => {
 
@@ -43,11 +43,8 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-      {isLoading ? 
-      (<h2>Cargando album...</h2>
-      ) :( 
-      <ItemDetail item={item} onAdd={onAdd} initial={initial}/> 
-      ) }
+      {isLoading ? <LoadPage/> : <ItemDetail item={item} onAdd={onAdd} initial={initial}/> 
+       }
     </>
   )
 }

@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="cartNavbar">
               <Counter />
               <div className="btnCart">
-                <Link to={"/cart"}> <ShoppingCart size={40} color="#302B31"/> </Link>
+                <Link to={"/cart"}> <ShoppingCart size={40} color="#353434"/> </Link>
               </div>
           </div>
           <div className="divSectionLinks">  
