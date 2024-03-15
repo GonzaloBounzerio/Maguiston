@@ -1,0 +1,32 @@
+
+
+.bodyFormCheck{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#formCheck{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+#formCheck input{
+    width: 100%;
+    height: 50px;
+    margin: 20px auto;
+}
+
+.bodyCompraDone{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}

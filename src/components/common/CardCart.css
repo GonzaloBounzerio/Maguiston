@@ -1,7 +1,10 @@
 
 .cardCartBody{
+    border-radius: 50px 50px 50px 50px;
+-webkit-border-radius: 50px 50px 50px 50px;
+-moz-border-radius: 50px 50px 50px 50px;
     margin-bottom: 50px;
-    border: 1px solid black;
+    border: 0.1px dotted black;
     height: 170px;
     display: flex;
     flex-direction: row;
@@ -10,21 +13,31 @@
 }
 
 .imgCartCard{
-    grid-row-start: 1;
-    grid-row-end: 3;
+    overflow: hidden;
     height: 95%;
+    border-radius: 88px 88px 88px 88px;
+-webkit-border-radius: 88px 88px 88px 88px;
+-moz-border-radius: 88px 88px 88px 88px;
 }
 
 .imgCartCard img{
     height: 100%;
 }
 
+.imgCartCard img:hover{
+    transform: scale(1.4) ;
+-webkit-transform: scale(1.4) ;
+-moz-transform: scale(1.4) ;
+}
+
 .textCartCard{
-    grid-column: 2;
-    grid-row: 1;
+    font-size: 2rem;
 }
 
 .btnCartCard{
-    grid-column: 2;
-    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
 }

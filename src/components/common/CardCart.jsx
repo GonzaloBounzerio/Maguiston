@@ -16,11 +16,11 @@ const CardCart = ({id,title,quantity,img,autor}) => {
         </div>
         <div className="textCartCard">
             <h3>{title}</h3>
-            <h4>{quantity}</h4>
             <h4>de {autor}</h4>
         </div>
         <div className="btnCartCard">
             <button onClick={() => removeById(id)}><Trash2/></button>
+            <h5>Total:{quantity}</h5>
         </div>  
     </div>
   )

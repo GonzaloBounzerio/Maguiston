@@ -11,7 +11,7 @@ const CartContainer = () => {
 
   setTimeout( () => {
     setIsLoading(false)
-  },1700)
+  },1500)
 
   return (
     isLoading ? <LoadPage/> : <Cart/>

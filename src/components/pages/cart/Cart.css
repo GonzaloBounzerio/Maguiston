@@ -18,7 +18,7 @@
 }
 
 .finalCart{
-    background-color: var(--celesteSec);
+    background-color: rgba(255, 255, 0, 0.747);
     border-radius: 72px 72px 72px 72px;
 -webkit-border-radius: 72px 72px 72px 72px;
 -moz-border-radius: 72px 72px 72px 72px;
@@ -52,5 +52,10 @@
 }
 
 .btnCompra:hover{
-    color: var(--greyPrim);
+    padding: 1%;
+    border-radius: 88px 88px 88px 88px;
+-webkit-border-radius: 88px 88px 88px 88px;
+-moz-border-radius: 88px 88px 88px 88px;
+    background-color: var(--greyPrim);
+    color: black;
 }

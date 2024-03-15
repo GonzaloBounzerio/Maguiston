@@ -1,7 +1,7 @@
 import { Routes , Route } from "react-router-dom"
 import { routes } from "./routes"
 import LayoutContainer from "../components/layout/LayoutContainer"
-import ErrorPage from "../components/pages/ErrorPage"
+import ErrorPage from "../components/pages/errorPage/ErrorPage"
 
 
 const AppRouter = () => {

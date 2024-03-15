@@ -3,9 +3,16 @@ import { CheckOut } from "./CheckOut";
 import { CartContext } from "../../../context/CartContext";
 import { addDoc , collection , updateDoc , doc} from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
+import LoadPage from "../../common/LoadPage";
 
 
 const CheckOutContainer = () => {
+
+  const [isLoading , setIsLoading] = useState(true)
+
+  setTimeout( () => {
+    setIsLoading(false)
+  },1000)
   
   const {cart,getTotalPrice,clearCart} = useContext(CartContext)
 
@@ -21,6 +28,8 @@ const CheckOutContainer = () => {
 
     const envioDeFormulario = (event) => {
         event.preventDefault();
+
+        setIsLoading(true)
 
         let order = {
           buyer: userInfo,
@@ -47,7 +56,11 @@ const CheckOutContainer = () => {
 
 
   return (
-    <> <CheckOut envioDeFormulario={envioDeFormulario} captureData={captureData} orderID={orderID}/> </>
+    <> 
+      {
+        isLoading ? <LoadPage/> : <CheckOut envioDeFormulario={envioDeFormulario} captureData={captureData} orderID={orderID}/>
+      }
+    </>
   )
 }
 
