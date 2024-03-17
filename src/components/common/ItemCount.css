@@ -1,0 +1,49 @@
+
+span:hover{
+    cursor: pointer;
+}
+
+.btnesCart{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+#sumabtn{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#counterItem{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#restBtn{
+    grid-row: 1;
+    grid-column: 3;
+}
+
+#cartBtn{
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+}
+
+#cartBtn label{
+    visibility: hidden;
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    background-color: var(--redPrim);
+    border-radius: 26px 26px 26px 26px;
+-webkit-border-radius: 26px 26px 26px 26px;
+-moz-border-radius: 26px 26px 26px 26px;
+}
+
+#cartBtn:hover label{
+    visibility: visible;
+}

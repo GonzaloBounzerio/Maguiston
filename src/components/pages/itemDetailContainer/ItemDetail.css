@@ -1,0 +1,37 @@
+
+
+.divCardDetail{
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.imgDetail{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.detailItem{
+    width: 40%;
+    font-size: 2rem;
+}
+
+.divCompraItem{
+    margin: 30px auto;
+    border-radius: 46px 46px 46px 46px;
+-webkit-border-radius: 46px 46px 46px 46px;
+-moz-border-radius: 46px 46px 46px 46px;
+box-shadow: 0px 0px 29px -7px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 0px 29px -7px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 29px -7px rgba(0,0,0,0.75);
+    background-color: var(--celesteSec);
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 

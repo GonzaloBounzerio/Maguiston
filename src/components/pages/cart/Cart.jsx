@@ -5,6 +5,7 @@ import { CartContext } from "../../../context/CartContext"
 import { Link } from "react-router-dom"
 import CardCart from "../../common/CardCart"
 import { ShoppingCartIcon} from "lucide-react"
+import BackBtn from "../../common/BackBtn"
 
 const Cart = () => {
 
@@ -16,6 +17,7 @@ const Cart = () => {
   return (
     <>
     <div className="bodyPageCart">
+      <BackBtn path={"/"}/>
       <div className="cardCart">
         {
             cart.map( (product) => <CardCart key={product.id} id={product.id} title={product.title} quantity={product.quantity} img={product.img} autor={product.autor}/>)

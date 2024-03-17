@@ -29,8 +29,6 @@ const CheckOutContainer = () => {
     const envioDeFormulario = (event) => {
         event.preventDefault();
 
-        setIsLoading(true)
-
         let order = {
           buyer: userInfo,
           items: cart,

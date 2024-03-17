@@ -1,15 +1,19 @@
+import { BadgeMinus, BadgePlus, BaggageClaim } from "lucide-react"
+import "./ItemCount.css"
 
 
 
 const ItemCount = ({counter,addOne,subOne,onAdd}) => {
 
+
+
   return (
     <> 
         <div className="btnesCart">
-            <button onClick={addOne} >Sumar</button>
-            <h2>{counter}</h2>
-            <button onClick={subOne} disabled={counter === 1 ? true : false} >Restar</button>
-            <button onClick={()=>(onAdd(counter))}>Agregar al carrito</button>
+            <span id="sumaBtn" onClick={addOne}> <BadgePlus/> </span>
+            <h5 id="counterItem" >{counter}</h5>
+            <span id="restBtn" onClick={subOne} disabled={counter === 1 ? true : false} > <BadgeMinus/> </span>
+            <span id="cartBtn" onClick={()=>(onAdd(counter))}><BaggageClaim size={30}/><label>Agregar al carrito</label></span>
         </div>
     </>
   )

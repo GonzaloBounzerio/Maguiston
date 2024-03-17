@@ -6,13 +6,12 @@ const ProductCard = ({id,title,autor,año,price,img}) => {
   return (
     <div className="cardBody">
         <div className="imageCard">
-          <img src={img} alt="" />    
+          <img height={"300px"} src={img} alt="" />    
         </div>
         <div className="cardText">
             <div className="descripCard">
-                <h3>{title}</h3>
-                <h4>{autor}</h4>
-                <h4>{año}</h4>
+                <h2>{title}</h2>
+                <h5>de {autor} , {año}</h5>
             </div>
             <div className="precioCard">
                 <h3>${price}</h3>

@@ -1,7 +1,7 @@
 
 import {Link} from "react-router-dom"
 import Counter from "../common/Counter"
-import { ShoppingCart} from 'lucide-react';
+import {ShoppingCart} from 'lucide-react';
 import "./Navbar.css"
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
             <Link className="btnNav" to={`/albumes/${1}`}> Charly García </Link>
             <Link className="btnNav" to={`/albumes/${2}`}> Gustavo Cerati </Link>
             <Link className="btnNav" to={`/albumes/${3}`}> Spinetta </Link>
-          </div>  
+          </div> 
       </div>
     </>
   )

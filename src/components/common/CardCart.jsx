@@ -5,6 +5,7 @@ import { CartContext } from "../../context/CartContext"
 import { Trash2 } from "lucide-react"
 
 
+
 const CardCart = ({id,title,quantity,img,autor}) => {
 
     const{removeById}=useContext(CartContext)
@@ -21,7 +22,7 @@ const CardCart = ({id,title,quantity,img,autor}) => {
         <div className="btnCartCard">
             <button onClick={() => removeById(id)}><Trash2/></button>
             <h5>Total:{quantity}</h5>
-        </div>  
+        </div> 
     </div>
   )
 }

@@ -1,4 +1,5 @@
 
+
 import { createContext, useState } from "react"
 
 export const CartContext = createContext()
@@ -40,6 +41,7 @@ export const CartContextProvider = ({children}) => {
     }
 
     const removeById = (id) => {
+
         let newArray = cart.filter((elemento) => elemento.id !== id)
         setCart(newArray)
         localStorage.setItem("cart",JSON.stringify(newArray))

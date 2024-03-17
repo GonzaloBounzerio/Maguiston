@@ -1,5 +1,5 @@
 
-import { HandHeart } from "lucide-react"
+import { HandHeart, LocateFixed } from "lucide-react"
 import "./Checkout.css"
 import { Link } from "react-router-dom"
 
@@ -22,6 +22,7 @@ export const CheckOut = ({envioDeFormulario,captureData,orderID}) => {
       ) : (
       <div className="bodyFormCheck">
           <h2 className="titleFormCheck">Checkout</h2>
+          <h3>Ingresa tus datos para finalizar la compra</h3>
           <form id="formCheck" onSubmit={envioDeFormulario}>
             <input type="text" placeholder="Nombre" name="name" onChange={captureData} required autoComplete="none"/>
             <input type="number" placeholder="Teléfono" name="phone" onChange={captureData} required autoComplete="none"/>

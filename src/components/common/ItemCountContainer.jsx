@@ -2,17 +2,17 @@ import { useState } from "react"
 import ItemCount from "./ItemCount";
 
 
-
 const ItemCountContainer = ( {stock , onAdd, initial=1}) => {  //si llega undefined ponele =1
 
 const[counter,setCounter]=useState(initial);
+
 
 
 const addOne = () => {
     if (counter<stock){
         setCounter(counter+1)
     } else {
-        alert("Stock maximo")
+      toast.error('Alcanzaste el límite del stock')
     }
 };
 
@@ -20,7 +20,7 @@ const subOne = () => {
     if (counter> 1) {
         setCounter(counter-1)
     } else {
-        alert("no puede ser menos de 1")
+      toast.error('No puedes agregar menos de 1 copia')
     }
 };
 

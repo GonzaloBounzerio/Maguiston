@@ -31,10 +31,16 @@
 }
 
 .textCartCard{
-    font-size: 2rem;
+    width: 40%;
+    font-size: 1.5rem;
+}
+
+.textCartCard h4{
+    font-size: .8rem;
 }
 
 .btnCartCard{
+    width: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
