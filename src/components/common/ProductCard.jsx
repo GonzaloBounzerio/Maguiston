@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom"
 import "./ProductCard.css"
 
-const ProductCard = ({id,title,autor,año,price,img}) => {
+const ProductCard = ({id,title,autor,año,price,img,stock}) => {
   return (
     <div className="cardBody">
         <div className="imageCard">
@@ -17,7 +17,12 @@ const ProductCard = ({id,title,autor,año,price,img}) => {
                 <h3>${price}</h3>
             </div>
             <div className="btnMore">
-              <Link to={`/item/${id}`}> <button>Ver más</button> </Link>
+
+              {
+                stock>0 ? (<Link to={`/item/${id}`}> <button>Ver más</button> </Link>) : (<h3>Sin Stock</h3>)
+              }
+
+              
             </div>
         </div>
     </div>
