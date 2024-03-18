@@ -6,6 +6,7 @@ import { CartContext } from '../../../context/CartContext';
 import { db } from '../../../firebaseConfig';
 import { collection , doc , getDoc} from "firebase/firestore"
 import LoadPage from '../../common/LoadPage';
+import Swal from 'sweetalert2';
 
 const ItemDetailContainer = () => {
 
@@ -31,11 +32,30 @@ const ItemDetailContainer = () => {
         },[id])
 
         const onAdd = ( cant ) => {
-          let infoProducto = {
-            ...item,
-            quantity:cant,
-          }
-          addToCart(infoProducto)
+
+          Swal.fire({
+            title: `¿Querés agregar ${cant} unidades al carrito?`,
+            text: "Confirma tu elección",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Agregar"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Productos agregados al carrito con éxito",
+                text: "Sigue navegando y agregando más discos",
+                icon: "success"
+              });
+              let infoProducto = {
+                ...item,
+                quantity:cant,
+              }
+              addToCart(infoProducto)
+            }
+          });
+
         }
         
 

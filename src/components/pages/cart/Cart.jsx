@@ -2,12 +2,33 @@
 import "./Cart.css"
 import { useContext} from "react"
 import { CartContext } from "../../../context/CartContext"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import CardCart from "../../common/CardCart"
 import { ShoppingCartIcon} from "lucide-react"
 import BackBtn from "../../common/BackBtn"
+import Swal from "sweetalert2"
+
 
 const Cart = () => {
+
+    let navigate = useNavigate()
+
+    const consultaCompra = ( () => {
+      Swal.fire({
+        title: "Confirmación de compra",
+        text: "Una vez confirmada, te enviaremos los datos de pago a la cuenta de mail",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Si, los quiero!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/checkout")
+        }
+      });
+
+    } )
 
 
     const {cart,clearCart,getTotalPrice} = useContext(CartContext)
@@ -17,7 +38,7 @@ const Cart = () => {
   return (
     <>
     <div className="bodyPageCart">
-      <BackBtn path={"/"}/>
+      <BackBtn path={-1}/>
       <div className="cardCart">
         {
             cart.map( (product) => <CardCart key={product.id} id={product.id} title={product.title} quantity={product.quantity} img={product.img} autor={product.autor}/>)
@@ -29,7 +50,7 @@ const Cart = () => {
         <>
             <div className="finalCart">
                 <h3>Total carrito: ${Math.round(total)}</h3>
-                <Link to="/checkout" className="btnCompra">
+                <Link className="btnCompra" onClick={consultaCompra}>
                     Comprar
                 </Link>
             </div>

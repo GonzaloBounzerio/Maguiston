@@ -1,6 +1,7 @@
 
 
 import { createContext, useState } from "react"
+import Swal from "sweetalert2";
 
 export const CartContext = createContext()
 
@@ -36,21 +37,65 @@ export const CartContextProvider = ({children}) => {
     }
 
     const clearCart = () => {
+
+
+        Swal.fire({
+            title: "¿Seguro?",
+            text: "Se borrará todo tu carrito de compras",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Si,borrar"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Listo",
+                text: "Ahora tu carrito está vacío",
+                icon: "success"
+              });
+              setCart([])
+              localStorage.removeItem("cart")
+            }
+          });
+        
+    }
+
+    const clearCartCompra = () => {
         setCart([])
         localStorage.removeItem("cart")
     }
 
     const removeById = (id) => {
 
-        let newArray = cart.filter((elemento) => elemento.id !== id)
-        setCart(newArray)
-        localStorage.setItem("cart",JSON.stringify(newArray))
+        Swal.fire({
+            title: "¿Seguro?",
+            text: "Se borrará este album del carrito",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Si,borrar"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Listo",
+                text: "Se borro el album del carrito",
+                icon: "success"
+              });
+                let newArray = cart.filter((elemento) => elemento.id !== id)
+                setCart(newArray)
+                localStorage.setItem("cart",JSON.stringify(newArray))
+            }
+        });
+
+        
     }
 
     const getTotalItems = () => {
 
         let total = cart.reduce( (acc,elemento) => {
-            return acc + elemento.quantity
+        return acc + elemento.quantity
         },0)
         return total
 
@@ -84,7 +129,8 @@ export const CartContextProvider = ({children}) => {
         removeById,
         getTotalItems,
         getTotalPrice,
-        getTotalQuantityById
+        getTotalQuantityById,
+        clearCartCompra
     }
 
   return <CartContext.Provider value={data}>

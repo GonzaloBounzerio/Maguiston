@@ -32,18 +32,3 @@ span:hover{
     display: flex;
     align-items: center;
 }
-
-#cartBtn label{
-    visibility: hidden;
-    position: absolute;
-    right: 20px;
-    font-size: 20px;
-    background-color: var(--redPrim);
-    border-radius: 26px 26px 26px 26px;
--webkit-border-radius: 26px 26px 26px 26px;
--moz-border-radius: 26px 26px 26px 26px;
-}
-
-#cartBtn:hover label{
-    visibility: visible;
-}

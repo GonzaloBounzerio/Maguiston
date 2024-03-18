@@ -4,6 +4,7 @@ import { CartContext } from "../../../context/CartContext";
 import { addDoc , collection , updateDoc , doc} from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
 import LoadPage from "../../common/LoadPage";
+import Swal from "sweetalert2";
 
 
 const CheckOutContainer = () => {
@@ -14,7 +15,7 @@ const CheckOutContainer = () => {
     setIsLoading(false)
   },1000)
   
-  const {cart,getTotalPrice,clearCart} = useContext(CartContext)
+  const {cart,getTotalPrice,clearCartCompra} = useContext(CartContext)
 
   const totalPrice = getTotalPrice()
 
@@ -29,22 +30,30 @@ const CheckOutContainer = () => {
     const envioDeFormulario = (event) => {
         event.preventDefault();
 
-        let order = {
-          buyer: userInfo,
-          items: cart,
-          total: totalPrice,
-        }
+          let order = {
+            buyer: userInfo,
+            items: cart,
+            total: totalPrice,
+          }
 
-        let ordersCollection = collection ( db , "orders")
-        
-        addDoc(ordersCollection,order).then( (res) => setOrderID(res.id))
-        
-        cart.forEach( (product) => {
-          let refDoc = doc(db,"products",product.id)
-          updateDoc( refDoc , {stock: product.stock - product.quantity} )
-        })
+          let ordersCollection = collection ( db , "orders")
+          
+          addDoc(ordersCollection,order).then( (res) => setOrderID(res.id))
+          
+          cart.forEach( (product) => {
+            let refDoc = doc(db,"products",product.id)
+            updateDoc( refDoc , {stock: product.stock - product.quantity} )
+          })
 
-        clearCart()
+          
+          Swal.fire({
+            title:"Orden confirmada",
+            icon:"success",
+            text:"En las próximas 24hs te llegarán las instrucciones de pago"
+          })
+          
+          clearCartCompra()
+          
 
       };
 

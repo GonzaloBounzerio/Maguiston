@@ -1,5 +1,6 @@
 import { useState } from "react"
 import ItemCount from "./ItemCount";
+import Swal from "sweetalert2";
 
 
 const ItemCountContainer = ( {stock , onAdd, initial=1}) => {  //si llega undefined ponele =1
@@ -12,7 +13,10 @@ const addOne = () => {
     if (counter<stock){
         setCounter(counter+1)
     } else {
-      toast.error('Alcanzaste el límite del stock')
+      Swal.fire({
+        icon:"warning",
+        text: "No disponemos de más unidades para agregar"
+      });
     }
 };
 
@@ -20,7 +24,10 @@ const subOne = () => {
     if (counter> 1) {
         setCounter(counter-1)
     } else {
-      toast.error('No puedes agregar menos de 1 copia')
+      Swal.fire({
+        icon:"error",
+        text: "No puedes agregar menos de 1 unidad"
+      });
     }
 };
 
